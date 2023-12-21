@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    ves1,ves2,cup=map(int,input().split())
+    greaterves=max(ves1,ves2)
+    smallerves=min(ves1,ves2)
+    count=0
+    while greaterves>smallerves:
+        greaterves-=cup
+        smallerves+=cup
+        count+=1
+    print(count)
